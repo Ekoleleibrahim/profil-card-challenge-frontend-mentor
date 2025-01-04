@@ -1,0 +1,127 @@
+/* Téléchargement des polices */
+@font-face {
+    font-family: kumbhsans-regular;
+    font-weight: 400;
+    src: url(assets/Kumbh_Sans/static/KumbhSans-Regular.ttf);
+}
+@font-face {
+    font-family: kumbhsans-semibold;
+    font-weight: 700;
+    src: url(assets/Kumbh_Sans/static/KumbhSans-SemiBold.ttf);
+}
+
+/* Les variables css pour les couleurs */
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --gray: hsl(0, 0%, 59%);
+}
+/* Les sélecteurs universelles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'kumbhsans-regular', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 100vh;
+    background: url(assets/images/bg-pattern-bottom.svg) bottom right, url(assets/images/bg-pattern-top.svg) top left;
+}
+
+.container{
+    max-width: 400px;
+    width: 100%;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.background{
+    background-image: url(assets/images/bg-pattern-card.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 20vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.absolute{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+h1,
+h2{
+    font-family: 'kumbhsans-semibold', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+}
+
+h1{
+    margin-top: 70px;
+}
+
+h2{
+    margin-bottom: 5px;
+}
+
+p{
+    color: var(--gray);
+}
+
+span{
+    color: var(--gray);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.line{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0.1px;
+    background-color: var(--gray);
+}
+.flex{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+.flex div{
+    text-align: center;
+}
+
+@media (max-width: 375px) {
+    body{
+        height: auto;
+        display: block;
+        padding: 100px 20px;
+    }
+}
